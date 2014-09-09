@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_contact"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/monitorRelativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/title_bar"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+
+    <!-- 第一列 -->
+
+    <RelativeLayout
+        android:id="@+id/monitorRelativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/monitorRelativeLayout1"
+        android:background="@drawable/re_bg" >
+
+        <TextView
+            android:id="@+id/process_name_text1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/a_process_name"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/process_name_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:inputType="textPersonName" >
+
+            <requestFocus />
+        </EditText>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/monitorRelativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/monitorRelativeLayout2"
+        android:background="@drawable/re_bg" >
+
+        <TextView
+            android:id="@+id/apply_preson_text1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/apply_person"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/person_name_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:inputType="textPersonName" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/monitorRelativeLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/monitorRelativeLayout3"
+        android:background="@drawable/re_bg" >
+
+        <TextView
+            android:id="@+id/apply_time_text"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/apply_time"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/apply_time_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:inputType="date" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/monitorRelativeLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/monitorRelativeLayout4"
+        android:background="@drawable/re_bg" >
+
+        <TextView
+            android:id="@+id/end_time_text"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:text="@string/end_time"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/end_time_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:ems="10"
+            android:inputType="date" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/monitorRelativeLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/monitorRelativeLayout5" >
+
+        <RelativeLayout
+            android:id="@+id/stepRelativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_alignParentLeft="true" >
+
+            <TextView
+                android:id="@+id/first_step"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/first_step"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/firstRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+              
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/first_radio2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/undone"
+                    android:textColor="@color/black" />
+
+                <RadioButton
+                    android:id="@+id/first_radio1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/firstRadioGroup"
+                    android:layout_toLeftOf="@+id/firstRadioGroup"
+                    android:checked="true"
+                    android:text="@string/done"
+                    android:textColor="@color/black" />
+            </RadioGroup>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dip"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/stepRelativeLayout1" >
+
+            <TextView
+                android:id="@+id/second_step"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="@string/second_step"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup1"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal" >
+                <RadioButton
+                    android:id="@+id/second_radio2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/undone"
+                    android:textColor="@color/black" />
+                <RadioButton
+                    android:id="@+id/second_radio1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/done"
+                    android:textColor="@color/black" />
+
+                
+            </RadioGroup>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

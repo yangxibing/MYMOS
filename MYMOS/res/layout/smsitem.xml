@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minHeight="50dp"
+    android:orientation="vertical" >
+
+
+    <TextView
+        android:id="@+id/smsdate"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical" 
+        
+        android:textSize="20sp" />
+    
+   
+        <TextView
+            android:id="@+id/smsbody"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/black"
+           
+            android:textSize="18sp" />
+
+        
+    
+
+</LinearLayout>

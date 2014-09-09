@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="doc_formwork_value">
+        <item>模板1</item>
+        <item>模板2</item>
+        <item>模板3</item>
+    </string-array>
+</resources>

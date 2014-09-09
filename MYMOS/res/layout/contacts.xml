@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/chat_contact"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/title_bar"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/contacts"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp" >
+
+                <!-- 定义第一个标签页的内容 -->
+
+                <RelativeLayout
+                    android:id="@+id/tab01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/chat_contact"
+                    android:orientation="vertical" >
+
+                    <!-- 通讯录搜索条 -->
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/white" >
+
+                        <Button
+                            android:id="@+id/search_menu"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/down_menu"
+                            android:onClick="onPopupContactButtonClick" />
+
+                        <EditText
+                            android:id="@+id/search_contact"
+                            android:layout_width="280dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@id/search_menu"
+                            android:textSize="20sp"
+                            android:layout_centerInParent="true"
+                            android:clickable="true"
+                            android:onClick="search_search"/>
+                      
+
+                        <Button
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/search_contact"
+                            android:background="@drawable/ic_btn_search" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0px"
+                        android:background="@drawable/myline" />
+
+                    <RelativeLayout
+                        android:id="@+id/my_group"
+                        android:layout_width="fill_parent"
+                        android:layout_height="50dip"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/re_bg"
+                        android:clickable="true"
+                        android:onClick="enter_myGroup" >
+
+                        <TextView
+                            android:id="@+id/myGroup_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginTop="13dip"
+                            android:text="我的个人群组"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <ImageButton
+                            android:id="@+id/right_permsg_center_imgbtn_select"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:background="@drawable/app_recommend_arrow"
+                            android:contentDescription="@string/back_info" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_below="@id/my_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="60dp" >
+
+                        <ListView
+                            android:id="@+id/acbuwa_list"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:cacheColorHint="#000000"
+                            android:divider="#00000000"
+                            android:fadingEdge="none"
+                            android:scrollbars="none"
+                            android:scrollingCache="false"
+                            android:visibility="visible" />
+
+                        <com.mymos.Util.QuickAlphabeticBar
+                            android:id="@+id/fast_scroller"
+                            android:layout_width="22dp"
+                            android:layout_height="fill_parent"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="top|right|center"
+                            android:layout_marginTop="0dip"
+                            android:background="@color/gray"
+                            android:scaleType="centerInside" />
+
+                        <TextView
+                            android:id="@+id/fast_position"
+                            android:layout_width="70dip"
+                            android:layout_height="70dip"
+                            android:layout_centerInParent="true"
+                            android:layout_gravity="center_horizontal|top"
+                            android:layout_margin="34dip"
+                            android:background="@drawable/sort_icon_bg_click"
+                            android:gravity="center"
+                            android:padding="2dip"
+                            android:textColor="@color/black"
+                            android:textSize="48sp"
+                            android:visibility="invisible" />
+                    </RelativeLayout>
+                    
+                     <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dip"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/white"
+                        android:paddingBottom="1dp" >
+
+                        <Button
+                            android:id="@+id/add_person_contact"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/add_button_bg"
+                             />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/add_person_contact"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/new_contact"
+                            android:textColor="@color/black" >
+                        </TextView>
+                    </RelativeLayout>
+                    
+                    
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/tab02"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/chat_contact"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/white" >
+
+                        <Button
+                            android:id="@+id/search_menu2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/down_menu"
+                            android:onClick="onPopupContactButtonClick" />
+
+                        <SearchView
+                            android:id="@+id/searchView2"
+                            android:layout_width="280dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@id/search_menu2"
+                            android:background="@drawable/bg_button"
+                            android:iconifiedByDefault="true"
+                            android:imeOptions="actionSearch"
+                            android:inputType="textCapWords"
+                            android:queryHint="输入关键字" >
+                        </SearchView>
+
+                        <Button
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/searchView2"
+                            android:background="@drawable/ic_btn_search" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/chat_contact" />
+
+                    <RelativeLayout
+                        android:id="@+id/my_public_group"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp" >
+
+                        <ListView
+                            android:id="@+id/lv_contactslist"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:divider="@color/chat_contact"
+                            android:background="@drawable/re_bg"
+                            android:dividerHeight="2dp"
+                            android:fastScrollEnabled="true"
+                            android:footerDividersEnabled="true"
+                            android:headerDividersEnabled="true"
+                            android:paddingLeft="10dp" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

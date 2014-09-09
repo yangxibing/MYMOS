@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+     xmlns:android="http://schemas.android.com/apk/res/android"
+      android:id="@+id/announcement_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:orientation="vertical" 
+    android:background="@color/white">
+    
+      <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/announcementAuthor"
+        android:layout_marginLeft="10dp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:text = "发布者：姚文豪"
+        />  
+    <LinearLayout
+      android:id="@+id/horizontalList"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="horizontal" 
+      android:background="@color/white">
+    <TextView 
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/announcementTitle"
+        android:layout_marginLeft="10dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"   
+        android:text = "标题"  
+        />
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/announcementDate"
+        android:textSize="15sp"
+        android:lines="2"
+        android:text = "发布日期：2014-09-10"
+        /> 
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:id="@+id/announcementcontent"
+        android:layout_marginLeft="10dp"
+        android:textSize="15sp"
+        android:lines="2"
+        />
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:id="@+id/visterNumber"
+         android:layout_marginLeft="210dp"
+         android:textColor="@color/black"
+         android:textSize="15sp"
+   
+        />
+        
+
+</LinearLayout>

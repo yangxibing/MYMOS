@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 作者：杨喜兵 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_contact" >
+
+    <RelativeLayout
+        android:id="@+id/phoneRelativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/title_bar"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/announcement_manage"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+    <!-- 公告列表 -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="60dp" >
+
+        <ListView
+            android:id="@+id/announcementList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/chat_contact"
+            android:dividerHeight="40dp"
+            android:fastScrollEnabled="true"
+            android:footerDividersEnabled="true"
+            android:headerDividersEnabled="true"
+            android:listSelector="@drawable/re_bg" >
+        </ListView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/issue_announcement"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingBottom="1dp" >
+
+        <Button
+            android:id="@+id/issue_announcement_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/add_button_bg"
+            android:onClick="issue_announcement" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/issue_announcement_button"
+            android:layout_centerHorizontal="true"
+            android:text="@string/issue_announcement"
+            android:textColor="@color/black" >
+        </TextView>
+    </RelativeLayout>
+
+</RelativeLayout>

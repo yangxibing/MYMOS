@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/title_bar"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_turnToType"
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_turntotype" />
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_weight="0.02"
+            android:gravity="center"
+            android:text="@string/newsList"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_AddNews"
+            android:layout_width="36dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_addnews" />
+    </LinearLayout>
+     
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#D4D4D4"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:numColumns="6" >
+    </GridView>
+
+        <ImageView
+            android:id="@+id/img_Slider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="matrix"
+            android:src="@drawable/curse" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:flipInterval="30"
+            android:textColor="#000000"
+            android:persistentDrawingCache="animation" />
+    </LinearLayout>

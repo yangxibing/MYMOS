@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_contact" >
+
+    <RelativeLayout
+        android:id="@+id/phoneRelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bar"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/backMessage1"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/back6"
+            android:contentDescription="@string/back_message1"
+           />
+
+        <EditText
+            android:id="@+id/phonenumber"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/backMessage1"
+            android:background="@drawable/bg_button"
+            android:ems="11"
+            
+            android:textColor="#ff1d1d1d"
+            android:textColorHint="#ff666666"
+            android:textSize="20.0sp"  />
+
+        <Button
+            android:id="@+id/add_contact"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dip"
+             android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/phonenumber"
+            android:background="@drawable/ic_menu_add_contact_p"
+            android:onClick="add_contact" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingBottom="1dp" >
+
+        <!--  
+          <Button
+            android:id="@+id/save_phone_message_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="10dp"
+            android:text="@string/cancle"
+            android:onClick="save_phone_message_button" />
+            -->
+        <EditText
+            android:id="@+id/receiverText2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/bg_button"
+            android:ems="15"
+            android:inputType="textMultiLine"
+            
+            android:textColor="#ff1d1d1d"
+            android:textColorHint="#ff666666"
+            android:textSize="15.0sp" />
+
+        <Button
+            android:id="@+id/send_phone_message_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dip"
+            android:layout_toRightOf="@id/receiverText2"
+            android:background="@drawable/send_button_bg"
+            android:onClick="send_phone_message_button" />
+       
+    </RelativeLayout>
+
+</RelativeLayout>

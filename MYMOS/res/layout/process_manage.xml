@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/title_bar"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/process_manage"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp" >
+
+                <!-- 定义第一个标签页：新建流程 -->
+
+                <RelativeLayout
+                    android:id="@+id/new_process_page"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/chat_contact"
+                    android:orientation="vertical" >
+
+                    <!-- 新建流程 -->
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dip"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/white"
+                        android:paddingBottom="1dp" >
+
+                        <Button
+                            android:id="@+id/new_a_process"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/add_button_bg"
+                            android:onClick="new_a_process" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/new_a_process"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/new_process"
+                            android:textColor="@color/black" >
+                        </TextView>
+                    </RelativeLayout>
+
+                    <!-- 流程列表 -->
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_above="@+id/relativeLayout1"
+                        android:orientation="vertical" >
+
+                        <ListView
+                            android:id="@+id/process_list1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:divider="@color/chat_contact"
+                            android:dividerHeight="3dp" >
+                        </ListView>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <!-- 定义第二个 标签：查看事宜 -->
+
+                <RelativeLayout
+                    android:id="@+id/view_matter"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/chat_contact"
+                    android:orientation="vertical" >
+
+                    <!-- 事宜列表 -->
+
+                   <!-- 待办事宜 -->
+
+                    <RelativeLayout
+                        android:id="@+id/matter1"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dip"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/re_bg"
+                        android:clickable="true"
+                        android:onClick="click_matter1" >
+
+                        <TextView
+                            android:id="@+id/matter1_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="13dip"
+                            android:text="@string/to_do"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <ImageButton
+                            android:id="@+id/matter_page1"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:background="@drawable/app_recommend_arrow"
+                            android:contentDescription="@string/next_icon" />
+                    </RelativeLayout>
+
+                    <!-- 已办事宜 -->
+
+                    <RelativeLayout
+                        android:id="@+id/matter2"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dip"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_below="@+id/matter1"
+                        android:layout_marginTop="65dip"
+                        android:background="@drawable/re_bg"
+                        android:clickable="true"
+                        android:onClick="click_matter2" >
+
+                        <TextView
+                            android:id="@+id/matter2_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="13dip"
+                            android:text="@string/finish"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <ImageButton
+                            android:id="@+id/matter_page2"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:background="@drawable/app_recommend_arrow"
+                            android:contentDescription="@string/next_icon" />
+                    </RelativeLayout>
+
+                    <!-- 办结事宜 -->
+
+                    <RelativeLayout
+                        android:id="@+id/matter3"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dip"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_below="@+id/matter2"
+                        android:layout_marginTop="120dip"
+                        android:background="@drawable/re_bg"
+                        android:clickable="true"
+                        android:onClick="click_matter3" >
+
+                        <TextView
+                            android:id="@+id/matter3_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="13dip"
+                            android:text="@string/done_matter"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <ImageButton
+                            android:id="@+id/matter_page3"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:background="@drawable/app_recommend_arrow"
+                            android:contentDescription="@string/next_icon" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <!-- 定义第三个标签页：流程控制 -->
+
+                <RelativeLayout
+                    android:id="@+id/process_control"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/chat_contact"
+                    android:orientation="vertical" >
+
+                    <!-- 流程监控 -->
+
+                    <RelativeLayout
+                        android:id="@+id/monitor_process"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dip"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/re_bg"
+                        android:clickable="true"
+                        android:onClick="click_monitor_process" >
+
+                        <TextView
+                            android:id="@+id/process_monitor"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="13dip"
+                            android:text="@string/process_monitor"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <ImageButton
+                            android:id="@+id/my_monitor_process_page"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:background="@drawable/app_recommend_arrow"
+                            android:contentDescription="@string/next_icon" />
+                    </RelativeLayout>
+
+                    <!-- 流程查询 -->
+
+                    <RelativeLayout
+                        android:id="@+id/query_process"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dip"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_below="@+id/monitor_process"
+                        android:layout_marginTop="65dip"
+                        android:background="@drawable/re_bg"
+                        android:clickable="true"
+                        android:onClick="click_query_process" >
+
+                        <TextView
+                            android:id="@+id/process_query"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="13dip"
+                            android:text="@string/process_query"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <ImageButton
+                            android:id="@+id/my_query_process_page"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:background="@drawable/app_recommend_arrow"
+                            android:contentDescription="@string/next_icon" />
+                    </RelativeLayout>
+
+                    <!-- 流程配置 -->
+
+                    <RelativeLayout
+                        android:id="@+id/config_process"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dip"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_below="@+id/query_process"
+                        android:layout_marginTop="120dip"
+                        android:background="@drawable/re_bg"
+                        android:clickable="true"
+                        android:onClick="click_config_process" >
+
+                        <TextView
+                            android:id="@+id/process_configuration"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="13dip"
+                            android:text="@string/process_configuration"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <ImageButton
+                            android:id="@+id/my_process_config_page"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:background="@drawable/app_recommend_arrow"
+                            android:contentDescription="@string/next_icon" />
+                    </RelativeLayout>
+
+                    <!-- 流程委托 -->
+
+                    <RelativeLayout
+                        android:id="@+id/entrust_process"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dip"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_below="@+id/config_process"
+                        android:layout_marginTop="175dip"
+                        android:background="@drawable/re_bg"
+                        android:clickable="true"
+                        android:onClick="click_entrust_process" >
+
+                        <TextView
+                            android:id="@+id/process_entrust"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="13dip"
+                            android:text="@string/process_entrust"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <ImageButton
+                            android:id="@+id/my_process_entrust_page"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:background="@drawable/app_recommend_arrow"
+                            android:contentDescription="@string/next_icon" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>

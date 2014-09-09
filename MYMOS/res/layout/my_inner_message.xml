@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_contact" >
+
+    <RelativeLayout
+        android:id="@+id/innerRelativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/title_bar"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:id="@+id/my_inner_message_title"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/innerRelativeLayout2"
+        android:layout_marginTop="5dp" >
+
+        <!-- 短信搜索条 -->
+
+        <RelativeLayout
+            android:id="@+id/relativeInnerLayout01"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="1dp"
+            android:background="@color/white" >
+
+            <Button
+                android:id="@+id/search_menu01"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/down_menu"
+                android:onClick="onPopupButtonClick2" >
+            </Button>
+
+            <SearchView
+                android:id="@+id/searchMessageView1"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:layout_toLeftOf="@+id/buttonSearch"
+                android:layout_toRightOf="@+id/search_menu01"
+                android:background="@color/white"
+                android:iconifiedByDefault="true"
+                android:imeOptions="actionSearch"
+                android:inputType="textCapWords"
+                android:queryHint="输入关键字" >
+            </SearchView>
+
+            <Button
+                android:id="@+id/buttonSearch"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@id/searchView1"
+                android:background="@drawable/ic_btn_search" />
+        </RelativeLayout>
+
+       <RelativeLayout
+            android:id="@+id/relativePhoneLayout03"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/relativeInnerLayout01"
+            android:layout_marginTop="1dp"
+            android:background="@color/white" >
+
+            
+            
+         
+             <ListView
+                android:id="@+id/inner_conversations_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:divider="@color/chat_contact"
+                android:dividerHeight="2dp"
+                android:fastScrollEnabled="true"
+                android:footerDividersEnabled="true"
+                android:headerDividersEnabled="true"
+               >
+            </ListView>
+         
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 作者：杨喜兵 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_contact" >
+
+    <RelativeLayout
+        android:id="@+id/phoneRelativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/title_bar"
+        android:orientation="vertical" >
+
+        
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+         
+            android:text="@string/announcement"
+            android:layout_centerInParent="true"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+    <!-- 公告列表 -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" >
+
+        
+           <ListView 
+            android:id="@+id/announcementList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/chat_contact" 
+            android:dividerHeight="40dp"
+            android:headerDividersEnabled="true"
+            android:footerDividersEnabled="true"
+            android:fastScrollEnabled="true"
+           >
+               
+           </ListView>
+      
+    </RelativeLayout>
+    
+
+</RelativeLayout>

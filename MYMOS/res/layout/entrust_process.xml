@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_contact"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/entrustRelativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/title_bar"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/process_entrust"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/entrustRelativeLayout1"
+        android:orientation="vertical" >
+
+        <ListView
+            android:id="@+id/entrust_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:divider="@color/white"
+            android:dividerHeight="3dp"
+            android:textColor="@color/black" >
+        </ListView>
+    </RelativeLayout>
+
+    <!-- 新建委托 -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingBottom="1dp" >
+
+        <Button
+            android:id="@+id/new_a_entrust"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/add_button_bg"
+            android:onClick="new_a_entrust" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/new_a_entrust"
+            android:layout_centerHorizontal="true"
+            android:text="@string/new_entrust"
+            android:textColor="@color/black" >
+        </TextView>
+    </RelativeLayout>
+
+</RelativeLayout>

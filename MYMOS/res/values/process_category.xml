@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="process_category">
+        <item>请假类</item>
+        <item>行政事务类</item>
+        <item>流程委托类</item>
+    </string-array>
+</resources>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_contact"
+    android:orientation="vertical"
+    tools:context=".NewFormActivity" >
+
+    <RelativeLayout
+        android:id="@+id/newDocRelativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/title_bar"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/new_person_doc"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/newDocRelativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:layout_below="@+id/newDocRelativeLayout1" >
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="14dp"
+            android:ems="10"
+            android:hint="@string/fill_name"
+            android:lines="1" />
+    </RelativeLayout>
+
+   <RelativeLayout
+        android:id="@+id/newDocRelativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newDocRelativeLayout2"
+        android:background="@drawable/re_bg"
+        android:orientation="vertical" >
+
+		<Spinner
+		    android:id="@+id/style_spinner"
+		    android:layout_width="wrap_content"
+		    android:layout_height="45dp"
+		    android:layout_marginLeft="5dp"
+            android:layout_marginRight="2dp"
+		    android:layout_alignParentRight="true"
+		    android:layout_alignParentTop="true"
+		    android:layout_centerVertical="true" />
+
+		<TextView
+		    android:id="@+id/formwork_text1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="2dp"
+            android:layout_marginRight="5dp"
+		    android:layout_centerVertical="true"
+		    android:layout_alignParentLeft="true"
+		    android:text="@string/formwork"
+		    android:textAppearance="?android:attr/textAppearanceMedium"
+		    android:textColor="@color/black" />
+
+		<Spinner
+		    android:id="@+id/formwork_spinner"
+		    android:layout_width="wrap_content"
+		    android:layout_height="45dp"
+		    android:layout_marginRight="5dp"
+		    android:layout_alignParentTop="true"
+		    android:layout_toRightOf="@+id/formwork_text1" />
+
+		<TextView
+		    android:id="@+id/textView1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+		    android:layout_centerVertical="true"
+		    android:layout_toLeftOf="@+id/style_spinner"
+		    android:text="@string/style"
+		    android:textAppearance="?android:attr/textAppearanceMedium"
+		    android:textColor="@color/black" />
+		
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/newDocRelativeLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newDocRelativeLayout3"
+        android:orientation="vertical" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/newDocRelativeLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/save_doc_button"
+        android:layout_below="@+id/newDocRelativeLayout4"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:ems="10"
+            android:gravity="top"
+            android:hint="@string/fill_doc_notice"
+            android:inputType="textMultiLine" >
+            <requestFocus />
+        </EditText>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/save_doc_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/doc_save"
+        android:textSize="22sp"
+        android:onClick="onSaveDoc" />
+
+</RelativeLayout>

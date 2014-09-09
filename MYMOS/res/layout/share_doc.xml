@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_contact"
+    android:orientation="vertical"
+    tools:context=".ShareDocActivity" >
+
+    <RelativeLayout
+        android:id="@+id/shareDocRelativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/title_bar"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/share"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/apply_process_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/share"
+        android:textSize="22sp" />
+
+    <RelativeLayout
+        android:id="@+id/shareDocRelativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/shareDocRelativeLayout1"
+        android:background="@drawable/re_bg"
+        android:clickable="false" >
+
+        <TextView
+            android:id="@+id/person_doc_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:text="@string/doc_name"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/person_doc_name_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/person_doc_name_text"
+            android:layout_marginLeft="37dp"
+            android:ems="11"
+            android:inputType="textPersonName" >
+
+            <requestFocus />
+        </EditText>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/shareDocRelativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/shareDocRelativeLayout2"
+        android:background="@drawable/re_bg"
+        android:clickable="false" >
+
+        <TextView
+            android:id="@+id/person_key_word_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:text="@string/key_word"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/person_key_word_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="37dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/person_key_word_text"
+            android:layout_alignParentRight="true"
+            android:ems="10"
+            android:inputType="phone" />
+ 
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/shareDocRelativeLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/shareDocRelativeLayout3"
+        android:background="@drawable/re_bg"
+        android:clickable="false" >
+
+        <TextView
+            android:id="@+id/share_way_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:text="@string/share_way"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/doc_share_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/share_way_text" />
+    </RelativeLayout>
+
+      <TextView
+          android:id="@+id/share_spinner_notice"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/shareDocRelativeLayout4"
+          android:layout_marginLeft="16dp"
+          android:textColor="@color/black"
+          android:textSize="13sp" />
+
+      <EditText
+          android:id="@+id/editText1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_above="@+id/apply_process_button"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/share_spinner_notice"
+          android:layout_marginTop="75dp"
+          android:ems="15"
+          android:inputType="textMultiLine"
+          android:lines="8" />
+
+</RelativeLayout>

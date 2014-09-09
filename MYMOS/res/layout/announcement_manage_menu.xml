@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/chat_contact">
+    <Button
+        android:id="@+id/display_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginTop="30.0dip"
+        android:background="@drawable/op_bg_selector"
+        android:text="@string/display"
+        android:textColor="#ff000000"
+        android:textSize="18.0sp" />
+     <Button
+        android:id="@+id/end_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_below="@id/display_btn"
+        android:background="@drawable/op_bg_selector"
+        android:text="@string/end"
+        android:textColor="#ff000000"
+        android:textSize="18.0sp" />
+      <Button
+        android:id="@+id/delete_btn"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+       android:layout_below="@id/end_btn"
+        android:background="@drawable/op_bg_selector"
+        android:text="@string/delete"
+        android:textColor="#ff000000"
+        android:textSize="18.0sp" />
+
+</RelativeLayout>

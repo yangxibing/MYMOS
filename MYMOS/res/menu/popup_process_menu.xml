@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+ 
+	  <item
+		android:id="@+id/leave_process"
+		android:title="@string/leave" />
+	<item
+		android:id="@+id/check_process"
+		android:title="@string/check" />
+	<item
+		android:id="@+id/administrative_thing_process"
+		android:title="@string/administration" />
+</menu>

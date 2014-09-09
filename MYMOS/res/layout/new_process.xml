@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_contact"
+    android:orientation="vertical"
+    tools:context=".NewProcessActivity" >
+
+    <RelativeLayout
+        android:id="@+id/newProcessRelativeLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/title_bar"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/new_process"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/apply_process_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/submit_apply_button"
+        android:textSize="22sp" />
+
+    <RelativeLayout
+        android:id="@+id/newProcessRelativeLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/newProcessRelativeLayout1"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/re_bg"
+        android:clickable="false" >
+
+        <TextView
+            android:id="@+id/user_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:text="@string/user"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="37dp"
+            android:ems="11"
+            android:inputType="textPersonName" >
+
+            <requestFocus />
+        </EditText>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/newProcessRelativeLayout1"
+        android:layout_marginTop="16dp"
+        android:text="@string/word_notice"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/black" />
+
+    <RelativeLayout
+        android:id="@+id/newProcessRelativeLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/newProcessRelativeLayout2"
+        android:background="@drawable/re_bg"
+        android:clickable="false" >
+
+        <TextView
+            android:id="@+id/contact_way"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:text="@string/phone_num"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/edit_num"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="37dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/contact_way"
+            android:layout_alignParentRight="true"
+            android:ems="10"
+            android:inputType="phone" />
+ 
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/newProcessRelativeLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/newProcessRelativeLayout3"
+        android:background="@drawable/re_bg"
+        android:clickable="false" >
+
+        <TextView
+            android:id="@+id/select_process_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="13dp"
+            android:text="@string/select_category"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+
+        <Spinner
+            android:id="@+id/process_category_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="16dp"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/select_process_text" />
+    </RelativeLayout>
+
+      <TextView
+          android:id="@+id/spinner_notice"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/newProcessRelativeLayout4"
+          android:layout_marginLeft="16dp"
+          android:textColor="@color/black"
+          android:textSize="13sp" />
+
+</RelativeLayout>

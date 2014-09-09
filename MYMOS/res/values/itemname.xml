@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--  
+    <string name="sms">短信</string>
+    <string name="mms">彩信</string>
+    <string name="allconversation">所有会话</string>
+    
+    <string name="inbox">收件箱</string>
+    <string name="sent">发件箱</string>
+    <string name="draft">草稿箱</string>
+    
+ -->   
+    <string-array name = "entryNameArray">
+        <item name = "sms">短信</item>
+        <item name = "mms">彩信</item>
+        <item name = "allconversation">所有会话</item>
+    </string-array>
+    
+    <string-array name = "boxNameArray">
+        <item name = "inbox">收件箱</item>
+        <item name = "sent">发件箱</item>
+        <item name = "draft">草稿箱</item>
+    </string-array>
+    
+
+</resources>

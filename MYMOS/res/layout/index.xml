@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/tabhost"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentLeft="true" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <FrameLayout
+            android:id="@android:id/tabcontent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <!-- 定义第一个标签页的内容 -->
+
+            <LinearLayout
+                android:id="@+id/tab01"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/chat_contact"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/title_bar"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="@string/index_title"
+                        android:textColor="@color/white"
+                        android:textSize="20.0sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/indx_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:contentDescription="index_img"
+                    android:src="@drawable/index_img" />
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/indx_image"
+                    android:layout_marginLeft="50.0dip"
+                    android:layout_marginRight="30.0dip"
+                    android:layout_marginTop="30.0dip" >
+
+                    <Button
+                        android:id="@+id/message_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/message" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/message_button"
+                        android:layout_marginLeft="20dp"
+                        android:text="短信" />
+
+                    <Button
+                        android:id="@+id/contacts_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/message_button"
+                        android:layout_marginLeft="100dp"
+                        android:background="@drawable/home_tongxunlu" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/contacts_button"
+                        android:layout_marginLeft="112dp"
+                        android:text="通讯录" />
+
+                    <Button
+                        android:id="@+id/news_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/message_button"
+                        android:layout_marginLeft="200dp"
+                        android:background="@drawable/newsl"
+                        android:onClick="news_center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/news_button"
+                        android:layout_marginLeft="220dp"
+                        android:text="新闻" />
+
+                    <Button
+                        android:id="@+id/docs_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/message_button"
+                        android:layout_marginTop="50dp"
+                        android:background="@drawable/doc" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/docs_button"
+                        android:layout_marginLeft="20dp"
+                        android:text="文档" />
+
+                    <Button
+                        android:id="@+id/process_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/docs_button"
+                        android:layout_marginLeft="100dp"
+                        android:layout_marginTop="50dp"
+                        android:background="@drawable/workflows" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/process_button"
+                        android:layout_marginLeft="115dp"
+                        android:layout_marginTop="65.5dp"
+                        android:text="流程" />
+
+                    <Button
+                        android:id="@+id/announs_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/docs_button"
+                        android:layout_marginLeft="200dp"
+                        android:layout_marginTop="65.5dp"
+                        android:background="@drawable/announs"
+                        android:onClick="enter_announcement" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/announs_button"
+                        android:layout_marginLeft="220dp"
+                        android:layout_marginTop="50dp"
+                        android:text="公告" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tab02"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/chat_contact"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/title_bar"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="消息"
+                        android:textColor="@color/white"
+                        android:textSize="20.0sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您有一条新消息 2014/08/12"
+                    android:textSize="11pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您有一条新消息 - 2012/09/20"
+                    android:textSize="11pt" />
+            </LinearLayout>
+            <!-- 定义第三个标签页的内容 -->
+
+            <LinearLayout
+                android:id="@+id/tab03"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/chat_contact"
+                android:orientation="vertical"
+                android:textSize="11pt" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/title_bar"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="提醒"
+                        android:textColor="@color/white"
+                        android:textSize="20.0sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您有一条新提醒 - 2012/09/19"
+                    android:textSize="11pt" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="您有一条新提醒  - 2012/10/12"
+                    android:textSize="11pt" />
+            </LinearLayout>
+            <!-- 第四个选项卡 -->
+
+            <LinearLayout
+                android:id="@+id/tab04"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@color/chat_contact"
+                android:orientation="vertical"
+                android:textSize="11pt" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:background="@drawable/title_bar"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="个人中心"
+                        android:textColor="@color/white"
+                        android:textSize="20.0sp" />
+                </RelativeLayout>
+
+                <!-- 个人基本信息 -->
+
+                <RelativeLayout
+                    android:id="@+id/person_info"
+                    android:layout_width="fill_parent"
+                    android:layout_height="70dip"
+                    android:background="@drawable/re_bg"
+                    android:clickable="true" >
+
+                    <ImageView
+                        android:id="@+id/usericon"
+                        android:layout_width="60dip"
+                        android:layout_height="60dip"
+                        android:layout_marginBottom="5dip"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginTop="5dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/user_head_bg" />
+
+                    <TextView
+                        android:id="@+id/person_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="20dip"
+                        android:layout_toRightOf="@id/usericon"
+                        android:text="@string/personName"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <ImageButton
+                        android:id="@+id/right_permsg_center_imgbtn_select"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/app_recommend_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/shape_bg" />
+
+                <!-- 密码管理 -->
+
+                <RelativeLayout
+                    android:id="@+id/modify_password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/re_bg"
+                    android:clickable="true"
+                    android:onClick="click_password_manage" >
+
+                    <ImageView
+                        android:id="@+id/passwordIcon"
+                        android:layout_width="40dip"
+                        android:layout_height="40dip"
+                        android:layout_marginBottom="5dip"
+                        android:layout_marginLeft="5dip"
+                        android:layout_marginTop="5dip"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/user_head_bg" />
+
+                    <TextView
+                        android:id="@+id/password_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="13dip"
+                        android:layout_toRightOf="@id/passwordIcon"
+                        android:text="@string/password_text"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+
+                    <ImageButton
+                        android:id="@+id/right_permsg_center_imgbtn_select"
+                        android:layout_width="20dip"
+                        android:layout_height="20dip"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="10dip"
+                        android:background="@drawable/app_recommend_arrow" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1.0px"
+                    android:background="@drawable/myline" />
+
+                <RelativeLayout
+                    android:id="@+id/exit_app"
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dip"
+                    android:layout_marginTop="10dip"
+                    android:background="@drawable/re_bg"
+                    android:clickable="true"
+                    android:onClick="exitAPP" >
+
+                    <TextView
+                        android:id="@+id/text_exit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dip"
+                        android:layout_marginTop="13dip"
+                        android:layout_centerInParent="true"
+                        android:text="退出"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </FrameLayout>
+
+        <TabWidget
+            android:id="@android:id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true" >
+        </TabWidget>
+    </LinearLayout>
+
+</TabHost>

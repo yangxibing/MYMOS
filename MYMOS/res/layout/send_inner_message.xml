@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/chat_contact" >
+
+    <RelativeLayout
+        android:id="@+id/innerRelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bar"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/backMessage1"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/back6"
+            android:contentDescription="@string/back_message1"
+           />
+
+        <EditText
+            android:id="@+id/receiverText1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toRightOf="@+id/backMessage1"
+            android:background="@drawable/bg_button"
+            android:ems="11"
+            
+            android:textColor="#ff1d1d1d"
+            android:textColorHint="#ff666666"
+            android:textSize="20.0sp" />
+
+        <Button
+            android:id="@+id/add_inner_contact"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dip"
+             android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/receiverText1"
+            android:background="@drawable/ic_menu_add_contact_p"
+            android:onClick="add_contact" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingBottom="1dp" >
+        
+        <Button
+            android:id="@+id/add_accessory_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dip"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/ic_menu_add_contact_n"
+            />
+        <Button
+            android:id="@+id/set_time"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dip"
+            android:layout_marginLeft="35dp"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/timer"
+            android:onClick="set_send_time" />
+        
+        <EditText
+            android:id="@+id/innerMessageContent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="9dp"
+            android:background="@drawable/bg_button"
+            android:ems="13"
+            android:inputType="textMultiLine"
+           
+            android:textColor="#ff1d1d1d"
+            android:textColorHint="#ff666666"
+            android:textSize="15.0sp" />
+
+        <Button
+            android:id="@+id/send_inner_message_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dip"
+            android:layout_toRightOf="@id/innerMessageContent"
+            android:background="@drawable/send_button_bg"
+            android:onClick="send_inner_message_button" />
+       
+    </RelativeLayout>
+
+</RelativeLayout>

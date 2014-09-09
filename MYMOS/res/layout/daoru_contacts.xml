@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/title_bar"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/my_groups_back"
+            android:layout_width="40dip"
+            android:layout_height="40dip"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dip"
+            android:background="@drawable/back6"
+            android:contentDescription="@string/back_info" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/my_groups_back"
+            android:text="@string/daoru_contacts"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+        
+        
+    </RelativeLayout>
+    <!-- 导入 到存储卡start-->
+     <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_marginTop="10dip"
+            android:layout_height="50.0dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" 
+            android:clickable="true"
+            android:onClick="scard_in"
+            android:background="@drawable/re_bg">
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            >
+
+            <TextView
+                android:id="@+id/scaed_in_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/scard_in"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+            <ImageButton
+                android:id="@+id/right_permsg_center_imgbtn_select"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dip"
+                android:background="@drawable/app_recommend_arrow"
+                android:contentDescription="@string/back_info" />
+
+           
+        </RelativeLayout>
+        </LinearLayout>
+        <!-- 导入存储卡end-->
+        
+   
+       
+     <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_marginTop="10dip"
+            android:layout_height="50.0dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+        <RelativeLayout
+            android:id="@+id/sim_in"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:background="@drawable/re_bg"
+            android:clickable="true"
+            android:onClick="start_import" >
+
+            <TextView
+                android:id="@+id/sim_in_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="开始导入"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+
+            
+        </RelativeLayout>
+        </LinearLayout>
+     
+  
+    
+    
+   
+
+</LinearLayout>
+

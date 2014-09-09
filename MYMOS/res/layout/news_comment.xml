@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff" >
+
+    <RelativeLayout
+        android:id="@+id/rlTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/title_bar">
+
+        <Button
+            android:id="@+id/btn_returnNews"
+            android:layout_width="46dp"
+            android:layout_height="40dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="0dp"
+            android:background="@drawable/ic_return" />
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:enabled="false"
+            android:gravity="center"
+            android:lines="1"
+            android:singleLine="true"
+            android:text="@string/newsComment"
+            android:textSize="28sp" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/lv_comment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlTitle" >
+    </ListView>
+
+    <RelativeLayout
+        android:id="@+id/commentAdd"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:paddingBottom="1dp" >
+
+        <Button
+            android:id="@+id/addComment"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/add_button_bg"
+            android:onClick="issue_announcement" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addComment"
+            android:layout_centerHorizontal="true"
+            android:text="@string/comment"
+            android:textColor="@color/black"
+            android:textSize="18sp" >
+        </TextView>
+    </RelativeLayout>
+
+</RelativeLayout>

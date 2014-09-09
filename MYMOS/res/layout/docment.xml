@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/chat_contact"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:background="@drawable/title_bar"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/document"
+            android:textColor="@color/white"
+            android:textSize="20.0sp" />
+    </RelativeLayout>
+
+    <TabHost
+        android:id="@android:id/tabhost"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="50dp" >
+            </TabWidget>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="1dp" >
+
+                <!-- 定义第一个标签页的内容 -->
+
+                <RelativeLayout
+                    android:id="@+id/tab01"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/chat_contact"
+                    android:orientation="vertical" >
+
+                    <!-- 文档搜索条 -->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/white" >
+
+                        <Button
+                            android:id="@+id/search_menu"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/down_menu"
+                            android:clickable="true"
+                            android:onClick="click_person_query" >
+                        </Button>
+
+                        <SearchView
+                            android:id="@+id/searchView1"
+                            android:layout_width="280dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@id/search_menu"
+                            android:background="@drawable/bg_button"
+                            android:iconifiedByDefault="true"
+                            android:imeOptions="actionSearch"
+                            android:inputType="textCapWords"
+                            android:queryHint="输入关键字" >
+                        </SearchView>
+
+                        <Button
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/searchView1"
+                            android:background="@drawable/ic_btn_search" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/person_docs_list"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginBottom="60dp"
+                        android:background="@drawable/re_bg"
+                        android:clickable="true"
+                        android:onClick="enter_public_group" >
+
+                        <ListView
+                            android:id="@+id/person_doc_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:divider="@color/chat_contact"
+                            android:dividerHeight="1dp"
+                            android:fastScrollEnabled="true"
+                            android:footerDividersEnabled="true"
+                            android:headerDividersEnabled="true" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0px"
+                        android:background="@drawable/myline" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dip"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/white"
+                        android:paddingBottom="1dp" >
+
+                        <Button
+                            android:id="@+id/add_doc"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/add_button_bg"
+                            android:onClick="new_person_document" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/add_doc"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/new_person_doc"
+                            android:textColor="@color/black" >
+                        </TextView>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <!-- 第二个Tab标签页 -->
+
+                <RelativeLayout
+                    android:id="@+id/tab02"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/chat_contact"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="1dp"
+                        android:background="@color/white" >
+
+                        <Button
+                            android:id="@+id/search_menu2"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/down_menu"
+                            android:clickable="true"
+                            android:onClick="click_public_query" >
+                        </Button>
+
+                        <SearchView
+                            android:id="@+id/searchView2"
+                            android:layout_width="280dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@id/search_menu2"
+                            android:background="@drawable/bg_button"
+                            android:iconifiedByDefault="true"
+                            android:imeOptions="actionSearch"
+                            android:inputType="textCapWords"
+                            android:queryHint="输入关键字" >
+                        </SearchView>
+
+                        <Button
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_toRightOf="@id/searchView2"
+                            android:background="@drawable/ic_btn_search" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/public_docs_list"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/re_bg" >
+
+                        <ListView
+                            android:id="@+id/public_doc_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:divider="@color/chat_contact"
+                            android:dividerHeight="1dp"
+                            android:fastScrollEnabled="true"
+                            android:footerDividersEnabled="true"
+                            android:headerDividersEnabled="true" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/add_public_document"
+                        android:layout_width="fill_parent"
+                        android:layout_height="60dip"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/white"
+                        android:paddingBottom="1dp" >
+
+                        <Button
+                            android:id="@+id/add_document"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:background="@drawable/add_button_bg" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/add_document"
+                            android:layout_centerHorizontal="true"
+                            android:text="@string/new_public_doc"
+                            android:textColor="@color/black" >
+                        </TextView>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <!-- 第三个Tab标签页 -->
+
+                <RelativeLayout
+                    android:id="@+id/tab03"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/chat_contact"
+                    android:orientation="vertical" >
+
+                    <!-- 文档模板 -->
+
+                    <RelativeLayout
+                        android:id="@+id/doc_formwork_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dip"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="10dip"
+                        android:background="@drawable/re_bg"
+                        android:clickable="true"
+                        android:onClick="click_formwork" >
+
+                        <TextView
+                            android:id="@+id/doc_formwork_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="13dip"
+                            android:text="@string/doc_formwork"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <ImageButton
+                            android:id="@+id/doc_button1"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:background="@drawable/app_recommend_arrow"
+                            android:contentDescription="@string/next_icon" />
+                    </RelativeLayout>
+
+                    <!-- 文档样式 -->
+
+                    <RelativeLayout
+                        android:id="@+id/doc_style_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dip"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_below="@+id/doc_formwork_layout"
+                        android:layout_marginTop="65dip"
+                        android:background="@drawable/re_bg"
+                        android:clickable="true"
+                        android:onClick="click_style" >
+
+                        <TextView
+                            android:id="@+id/process_query"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="13dip"
+                            android:text="@string/doc_style"
+                            android:textColor="@color/black"
+                            android:textSize="20sp" />
+
+                        <ImageButton
+                            android:id="@+id/doc_button2"
+                            android:layout_width="20dip"
+                            android:layout_height="20dip"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dip"
+                            android:background="@drawable/app_recommend_arrow"
+                            android:contentDescription="@string/next_icon" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </TabHost>
+
+</LinearLayout>
